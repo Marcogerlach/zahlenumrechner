@@ -10,18 +10,20 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
     color: #333;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
+    width: 100%;
+    min-height: 100vh;
     background: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
     backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -43,7 +45,11 @@ header p {
 }
 
 main {
-    padding: 40px;
+    flex: 1;
+    padding: 40px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .converter-section {
@@ -184,7 +190,7 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 40px;
+    margin-top: auto;
 }
 
 /* Result Styles */
