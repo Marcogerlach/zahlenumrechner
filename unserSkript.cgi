@@ -11,14 +11,6 @@ import urllib.parse
 # Aktiviere CGI-Debugging
 cgitb.enable()
 
-# Setze die richtige Kodierung für Windows
-if sys.platform == "win32":
-    try:
-        sys.stdout.reconfigure(encoding='utf-8')
-        sys.stderr.reconfigure(encoding='utf-8')
-    except:
-        pass
-
 def umrechnen_von_dezimal(zahl, ziel_basis):
     """Rechnet eine Dezimalzahl in die gewünschte Basis um."""
     if zahl == 0:
@@ -149,7 +141,6 @@ def print_result_page(zahl, von_basis, ziel_basis, ergebnis, error=False):
 </html>""")
 
 def main():
-    """Hauptfunktion des CGI-Skripts."""
     try:
         # Hole Daten aus GET-Parameter (Query String) oder POST
         if os.environ.get('REQUEST_METHOD') == 'POST':

@@ -1,94 +1,61 @@
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Zahlenumrechner</title>
-        <link rel="stylesheet" href="unserStyle.css">
-    </head>
-    <body>
-        <div class="container">
-            <header>
-                <h1>🔢 Zahlenumrechner</h1>
-                <p>Rechne Zahlen zwischen verschiedenen Zahlensystemen um</p>
-            </header>
-            
-            <main>                <div class="converter-section">
-                    <form action="unserSkript.cgi" method="post" class="converter-form">
-                        <div class="input-group">
-                            <label for="zahl">Zahl eingeben:</label>
-                            <input type="text" id="zahl" name="zahl" placeholder="z.B. 255, FF, 1010" required>
-                        </div>
-                        
-                        <div class="basis-group">
-                            <div class="basis-input">
-                                <label for="von_basis">Von Basis:</label>
-                                <select id="von_basis" name="von_basis">
-                                    <option value="2">Binär (2)</option>
-                                    <option value="8">Oktal (8)</option>
-                                    <option value="10" selected>Dezimal (10)</option>
-                                    <option value="16">Hexadezimal (16)</option>
-                                </select>
-                            </div>
-                            
-                            <div class="basis-input">
-                                <label for="ziel_basis">Zu Basis:</label>
-                                <select id="ziel_basis" name="ziel_basis">
-                                    <option value="2">Binär (2)</option>
-                                    <option value="8">Oktal (8)</option>
-                                    <option value="10">Dezimal (10)</option>
-                                    <option value="16" selected>Hexadezimal (16)</option>
-                                </select>
-                            </div>
-                        </div>
-                        
-                        <button type="submit" class="convert-btn">Umrechnen</button>
-                    </form>
-                </div>
-                
-                <div class="examples-section">
-                    <h3>Beispiele:</h3>
-                    <div class="examples-grid">
-                        <div class="example">
-                            <strong>255 (Dezimal) → FF (Hexadezimal)</strong>
-                        </div>
-                        <div class="example">
-                            <strong>1010 (Binär) → 10 (Dezimal)</strong>
-                        </div>
-                        <div class="example">
-                            <strong>FF (Hexadezimal) → 11111111 (Binär)</strong>
-                        </div>
-                        <div class="example">
-                            <strong>123 (Oktal) → 83 (Dezimal)</strong>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="info-section">
-                    <h3>Unterstützte Zahlensysteme:</h3>
-                    <ul>
-                        <li><strong>Binär (Basis 2):</strong> Nur 0 und 1</li>
-                        <li><strong>Oktal (Basis 8):</strong> Ziffern 0-7</li>
-                        <li><strong>Dezimal (Basis 10):</strong> Ziffern 0-9</li>
-                        <li><strong>Hexadezimal (Basis 16):</strong> Ziffern 0-9, A-F</li>
-                    </ul>
-                </div>
-            </main>
-            
-            <footer>
-                <p>&copy; 2025 Zahlenumrechner | Made with ❤️ in Python</p>
-            </footer>
-        </div>
-        
-        <script>
-            // Einfache Validierung
-            document.querySelector('.converter-form').addEventListener('submit', function(e) {
-                const zahl = document.getElementById('zahl').value.trim();
-                if (!zahl) {
-                    e.preventDefault();
-                    alert('Bitte geben Sie eine Zahl ein!');
-                }
-            });
-        </script>
-    </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Zahlenumrechner</title>
+		<link rel="stylesheet" href="unserStyle.css" />
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>🔢 Zahlenumrechner</h1>
+				<p>Rechne Zahlen zwischen verschiedenen Zahlensystemen um</p>
+			</header>
+
+			<main>
+				<div class="converter-section">
+					<form action="unserSkript.cgi" method="post" class="converter-form">
+						<div class="input-group">
+							<label for="zahl">Zahl eingeben:</label>
+							<input
+								type="text"
+								id="zahl"
+								name="zahl"
+								placeholder="z.B. 255, FF, 1010"
+							/>
+						</div>
+
+						<div class="basis-group">
+							<div class="basis-input">
+								<label for="von_basis">Von Basis:</label>
+								<select id="von_basis" name="von_basis">
+									<option value="2">Binär (2)</option>
+									<option value="8">Oktal (8)</option>
+									<option value="10" selected>Dezimal (10)</option>
+									<option value="16">Hexadezimal (16)</option>
+								</select>
+							</div>
+
+							<div class="basis-input">
+								<label for="ziel_basis">Zu Basis:</label>
+								<select id="ziel_basis" name="ziel_basis">
+									<option value="2">Binär (2)</option>
+									<option value="8">Oktal (8)</option>
+									<option value="10">Dezimal (10)</option>
+									<option value="16" selected>Hexadezimal (16)</option>
+								</select>
+							</div>
+						</div>
+
+						<button type="submit" class="convert-btn">Umrechnen</button>
+					</form>
+				</div>
+			</main>
+
+			<footer>
+				<p>Made by Marvin and Marco</p>
+			</footer>
+		</div>
+	</body>
 </html>
